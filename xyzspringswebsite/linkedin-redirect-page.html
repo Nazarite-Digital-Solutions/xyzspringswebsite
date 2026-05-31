@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>LinkedIn Redirect Page | XYZ Springs</title>
+  
+    <link rel="icon" type="image/svg+xml" href="xyzspringsfavicon.svg">
+  
+    <style>
+      *, 
+      *::before, 
+      *::after { 
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 0; 
+      }
+
+      html, 
+      body {
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 5vw;
+      }
+
+      /* ---------- BOX ---------- */
+      
+      .card {
+        width: 90%;
+        max-width: 495px;
+        background: black;
+        border: 3px solid red;
+        border-radius: 25px;
+        padding: 3rem 2.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      /* ---------- SENTENCE ---------- */
+      
+      .card__text {
+        font-family: Arial, sans-serif;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        color: white;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      /* ---------- BUTTON ---------- */
+      
+      .wa-btn {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        min-height: 44px;
+        border: 2px solid red;
+        border-radius: 25px;
+        background: white;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: clamp(0.88rem, 1.6vw, 1rem);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.25s ease, color 0.25s ease;
+      }
+
+      /* ---------- DESKTOP HOVER ONLY ---------- */
+      
+      @media (hover: hover) and (pointer: fine) {
+        .wa-btn:hover {
+          background: red;
+          color: white;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .card { padding: 2.5rem 2.2rem; }
+      }
+
+      @media (max-width: 700px) {
+        .card {
+          width: 94%;
+          padding: 2.2rem 1.8rem;
+          gap: 1.6rem;
+        }
+        
+        .card__text { font-size: 1.2rem;}
+      }
+
+      @media (max-width: 468px) {
+        .card {
+          width: 96%;
+          padding: 2rem 1.4rem;
+          border-radius: 18px;
+          gap: 1.4rem;
+        }
+
+        .card__text { font-size: 1rem; }
+
+        .wa-btn {
+          width: 100%;
+          text-align: center;
+          font-size: 0.9rem;
+          padding: 0.8rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  
+<!-- ──────────────────────────────────────────────────── BODY ───────────────────────────────────────────────────── -->
+  
+  <body>
+
+    <main class="page">
+      <div class="card">
+
+        <p class="card__text">On a live site, this would open LinkedIn</p>
+
+        <a href="index.html" class="wa-btn" rel="noopener noreferrer">GO BACK</a>
+
+      </div>
+    </main>
+    
+  </body>
+</html>
