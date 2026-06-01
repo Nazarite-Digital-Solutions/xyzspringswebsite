@@ -42,7 +42,7 @@
         z-index: 1000;
       }
       
-      #hero {
+      #hero-page {
         position: relative;
         width: 100%;
         height: 100vh;
@@ -80,7 +80,7 @@
 
       /* ---------- HERO PAGE WRAPPER ---------- */
         
-      .hero-content {
+      .hero-page-content {
         position: relative;
         z-index: 1;
         display: flex;
@@ -100,7 +100,7 @@
 
       /* ---------- MAIN TITLE ---------- */
         
-      .hero-title {
+      .hero-page-title {
         font-family: Arial, sans-serif;
         font-size: clamp(2.5rem, 7vw, 5rem);
         font-weight: 700;
@@ -109,19 +109,19 @@
         margin-bottom: 1rem;
       }
 
-      .hero-title .red { 
+      .hero-page-title .red-xyz-hero-page-title { 
         color: white;
         text-shadow: 2px 2px 4px white;
       }
         
-      .hero-title .white { 
+      .hero-page-title .white-xyz-hero-page-title { 
         color: red; 
         text-shadow: 2px 2px 4px red;
       }
 
       /* ---------- HERO PAGE TAGLINE ---------- */
         
-      .hero-tagline {
+      .hero-page-tagline {
         font-family: Arial, sans-serif;
         font-size: clamp(1rem, 3vw, 1.6rem);
         font-weight: 700;
@@ -129,15 +129,15 @@
         margin-bottom: 1rem;
       }
 
-      .hero-tagline .white { 
+      .hero-page-tagline .hero-page-tagline-bouncing-white-word { 
         color: white; 
       }
         
-      .hero-tagline .red { 
+      .hero-page-tagline .hero-page-tagline-red-sentence { 
         color: red; 
       }
 
-      .word-bouncing {
+      .hero-page-tagline-bouncing-white-word {
         display: inline-block;
         animation: contentFlyIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both,
                    bounce 1.2s ease-in-out 1s infinite;
@@ -150,7 +150,7 @@
 
       /* ---------- HERO PAGE SUB TAGLINE ---------- */
         
-      .hero-sub {
+      .hero-page-sub {
         font-family: "Times New Roman", Times, serif;
         font-style: italic;
         font-size: clamp(1rem, 2.5vw, 1.35rem);
@@ -161,7 +161,8 @@
 
       /* ---------- DISCOVER MORE BUTTON ---------- */
         
-      .btn {
+      .about-page-button,
+      .hero-page-button {
         font-family: Arial, sans-serif;
         font-size: 1rem;
         font-weight: 700;
@@ -225,7 +226,7 @@
 
 /* ─────────────────────────────────────────────────── ABOUT PAGE ─────────────────────────────────────────────────── */
         
-      #about {
+      #about-page {
         background: white;
         padding-bottom: 6rem;
         min-height: 100vh;
@@ -235,7 +236,7 @@
         scroll-margin-top: 4rem;
       }
 
-      .about-box {
+      .about-page-box {
         width: 90%;
         max-width: 860px;
         border: 2px solid red;
@@ -244,7 +245,7 @@
         padding: 2.5rem 2.5rem 2.5rem 2.5rem;
       }
 
-      .about-heading {
+      .about-page-heading {
         font-family: 'Times New Roman', Times, serif;
         font-size: clamp(1.4rem, 4vw, 2rem);
         font-weight: 700;
@@ -256,7 +257,7 @@
         margin-bottom: 1.5rem;
       }
 
-      .about-text {
+      .about-page-text {
         color: white;
         font-family: Arial, sans-serif;
         font-size: clamp(0.9rem, 2vw, 1rem);
@@ -264,27 +265,27 @@
         text-align: left;
       }
 
-      .about-text p {
+      .about-page-text p {
         margin-bottom: 1.2rem;
       }
 
-      .about-text p:last-child {
+      .about-page-text p:last-child {
         margin-bottom: 0;
       }
 
-      .about-text .red { 
+      .about-page-text .about-page-red-xyz { 
         color: red;
         font-weight: 700;
       }
         
-      .about-text .white { 
+      .about-page-text .about-page-white-springs { 
         color: white;
         font-weight: 700;
       }
 
       /* ---------- ABOUT PAGE BUTTONS ---------- */
       
-      .about-buttons {
+      .about-page-buttons {
         display: flex;
         gap: 1.5rem;
         justify-content: center;
@@ -310,7 +311,8 @@
       /* ---------- HOVER EFFECTS ONLY ON DESKTOP ---------- */
         
       @media (min-width: 1025px) {
-        .btn:hover {
+        .about-page-button:hover,
+        .hero-page-button:hover {
           background: red;
           color: white;
         }
@@ -319,28 +321,26 @@
       /* ---------- 1024px ---------- */
         
       @media (max-width: 1024px) {
-        .btn { 
+        .about-page-button:hover,
+        .hero-page-button:hover { 
           pointer-events: auto; 
         }
             
-        .btn:hover { 
+        .about-page-button:hover,
+        .hero-page-button:hover {
           background: white; 
           color: black; 
         }
 
-        nav { 
-          gap: 1.2rem; 
-        }
-
-        .hero-title { 
+        .hero-page-title { 
           font-size: clamp(2rem, 6vw, 3.5rem); 
         }
             
-        .hero-tagline { 
+        .hero-page-tagline { 
           font-size: clamp(0.9rem, 2.8vw, 1.3rem); 
         }
 
-        .about-box { 
+        .about-page-box { 
           padding: 2rem 1.8rem; 
         }
       }
@@ -348,40 +348,33 @@
       /* ---------- 700px ---------- */
         
       @media (max-width: 700px) {
-        .btn:hover { 
+        .about-page-button:hover,
+        .hero-page-button:hover { 
           background: white; 
           color: black; 
         }
 
-        nav { 
-          gap: 0.9rem; 
-        }
-            
-        nav a { 
-          font-size: 0.8rem; 
-        }
-
-        .hero-content { 
+        .hero-page-content { 
           width: 95%; 
         }
             
-        .hero-title { 
+        .hero-page-title { 
           font-size: clamp(1.8rem, 8vw, 3rem); 
         }
             
-        .hero-tagline { 
+        .hero-page-tagline { 
           font-size: clamp(0.8rem, 3.5vw, 1.1rem); 
         }
             
-        .hero-sub { 
+        .hero-page-sub { 
           font-size: clamp(0.85rem, 3vw, 1.1rem); 
         }
 
-        .about-box { 
+        .about-page-box { 
           padding: 1.5rem 1.2rem; width: 95%; 
         }
             
-        .about-buttons { 
+        .about-page-buttons { 
           flex-direction: column; 
           align-items: center; 
         }
@@ -390,49 +383,35 @@
       /* ---------- 468px ---------- */
         
       @media (max-width: 468px) {
-        .btn:hover { 
+        .about-page-button:hover,
+        .hero-page-button:hover { 
           background: white; 
           color: black; 
         }
 
-        header { 
-          padding: 0 1rem; 
-        }
-            
-        header .logo { 
-          font-size: 1.1rem; 
-        }
-            
-        nav { 
-          gap: 0.6rem; 
-        }
-            
-        nav a { 
-          font-size: 0.72rem; 
-        }
-
-        .hero-title { 
+        .hero-page-title { 
           font-size: clamp(1.5rem, 10vw, 2.5rem); 
         }
             
-        .hero-tagline { 
+        .hero-page-tagline { 
           font-size: clamp(0.75rem, 4vw, 1rem); 
         }
             
-        .hero-sub { 
+        .hero-page-sub { 
           font-size: clamp(0.8rem, 3.5vw, 1rem); 
         }
             
-        .btn { 
+        .about-page-button:hover,
+        .hero-page-button:hover { 
           font-size: 0.85rem; 
           padding: 0.65rem 1.4rem; 
         }
 
-        .about-box { 
+        .about-page-box { 
           padding: 1.2rem 1rem; 
         }
             
-        .about-text { 
+        .about-page-text { 
           font-size: 0.88rem; 
         }
       }
@@ -516,7 +495,7 @@
             
             <ul class="navbar__links" role="list">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#about-page">ABOUT</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -572,7 +551,7 @@
             </div>
             <ul class="mobile-menu__links" role="list">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#about-page">ABOUT</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -592,26 +571,26 @@
     
 <!-- ───────────────────────────────────────────────── HERO PAGE ─────────────────────────────────────────────────── -->
         
-    <section id="hero">
+    <section id="hero-page">
         <div class="hero-bg"></div>
 
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="red">XYZ</span> <span class="white">SPRINGS</span>
+        <div class="hero-page-content">
+            <h1 class="hero-page-title">
+                <span class="red-xyz-hero-page-title">XYZ</span> <span class="white-xyz-hero-page-title">SPRINGS</span>
             </h1>
 
             <!---------- HERO PAGE TAGLINE ---------->
             
-            <p class="hero-tagline">
-                <span class="word-bouncing white">BOUNCING</span>
-                <span class="red">&nbsp;YOUR PRODUCT INTO THE FUTURE</span>
+            <p class="hero-page-tagline">
+                <span class="hero-page-tagline-bouncing-white-word">BOUNCING</span>
+                <span class="hero-page-tagline-red-sentence">&nbsp;YOUR PRODUCT INTO THE FUTURE</span>
             </p>
 
             <!---------- HERO PAGE SUB TAGLINE ---------->
             
-            <p class="hero-sub">Precision Manufactured Springs</p>
+            <p class="hero-page-sub">Precision Manufactured Springs</p>
 
-            <a href="products.html" class="btn">DISCOVER MORE</a>
+            <a href="products.html" class="hero-page-button">DISCOVER MORE</a>
 
             <!---------- SCROLL INDICATOR ---------->
             
@@ -629,15 +608,15 @@
 
 <!-- ──────────────────────────────────────────────── ABOUT PAGE ─────────────────────────────────────────────────── -->
         
-    <section id="about" style="background:#111; padding-top: calc(5rem + 2rem); padding-bottom: 0; display:flex; flex-direction:column; align-items:center; min-height:100vh;">
+    <section id="about-page" style="background:#111; padding-top: calc(5rem + 2rem); padding-bottom: 0; display:flex; flex-direction:column; align-items:center; min-height:100vh;">
 
       <!---------- ABOUT PAGE BOX ---------->
         
-      <div class="about-box">
-        <h2 class="about-heading">About Us</h2>
-        <div class="about-text">
+      <div class="about-page-box">
+        <h2 class="about-page-heading">About Us</h2>
+        <div class="about-page-text">
           <p>
-            <span class="red">XYZ</span> <span class="white">Springs</span> specialise in the design and 
+            <span class="about-page-red-xyz">XYZ</span> <span class="about-page-white-springs">Springs</span> specialise in the design and 
             manufacture of high-quality metal springs engineered for strength, durability, and precision. 
             With a commitment to excellence and reliability, we supply custom and standard spring solutions to 
             a wide range of industries, including automotive, industrial, construction, and consumer applications. 
@@ -651,7 +630,7 @@
             closely with customers to deliver dependable solutions, competitive pricing, and on-time delivery.
           </p>
           <p>
-            At <span class="red">XYZ</span> <span class="white">Springs</span>, we don't just manufacture 
+            At <span class="about-page-red-xyz">XYZ</span> <span class="about-page-white-springs">Springs</span>, we don't just manufacture 
             springs - we build strong foundations for the industries we serve.
           </p>
         </div>
@@ -659,9 +638,9 @@
 
       <!---------- ABOUT PAGE BUTTONS ---------->
         
-      <div class="about-buttons">
-        <a href="products.html" class="btn">VIEW PRODUCTS</a>
-        <a href="contact.html" class="btn">CONTACT US</a>
+      <div class="about-page-buttons">
+        <a href="products.html" class="about-page-button">VIEW PRODUCTS</a>
+        <a href="contact.html" class="about-page-button">CONTACT US</a>
       </div>
 
       <!---------- COPYRIGHT ---------->

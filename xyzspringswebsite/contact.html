@@ -51,8 +51,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 2rem 4vw;
-        margin-top: 10rem;  
+        padding-top: 11rem;  
       }
 
       /* ---------- BOXES ---------- */
@@ -87,7 +86,8 @@
 
       /* ---------- BOX HEADING ---------- */
     
-      .contact-us-box-heading {
+      .contact-us-box-heading,
+      .enquiry-form-box-heading {
         text-align: center;
         font-size: clamp(1.3rem, 2.2vw, 1.9rem);
         color: white;
@@ -223,16 +223,6 @@
         display: flex;
         flex-direction: column;
       }
-      
-      .enquiry-form-box-heading {
-        text-align: center;
-        font-size: clamp(1.3rem, 2.2vw, 1.9rem);
-        color: white;
-        letter-spacing: 0.12em;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1.5rem;
-        text-decoration: 2px underline red;
-      }
 
       .contact-form {
         display: flex;
@@ -327,13 +317,13 @@
 
       /* ---------- COPYRIGHT ---------- */
     
-      footer {
+      .copyright {
         color: white;
         padding: 2rem 1rem;
         font-family: Arial, sans-serif;
         font-size: 0.8rem;
         text-align: center;
-        margin-top: 0.5rem;
+        margin-top: 1.5rem;
         width: 100%;
       }
 
@@ -370,7 +360,8 @@
         }
       
         main {
-          margin-top: 10rem;
+          padding-top: 11rem; 
+          justify-content: flex-start;
         }
       
         .contact-page-box:first-child {
@@ -386,18 +377,13 @@
         .success-overlay { 
           border-radius: 0.5rem; 
         }
-      
-        main { 
-          padding: 1.5rem 4vw; 
-          justify-content: flex-start; 
-        }
       }
 
       /* ---------- 468px ---------- */
     
       @media (max-width: 468px) {
         main {
-          margin-top: 10rem;
+          padding-top: 10rem;
         }
       
         .contact-page-box { 
@@ -420,9 +406,9 @@
         .contact-form textarea { 
           font-size: 0.88rem; 
         }
-      
-        main { 
-          padding: 1rem 3vw; 
+        
+        .copyright {
+          font-size: 0.75rem;
         }
       }
     </style>
@@ -505,7 +491,7 @@
             
             <ul class="navbar__links" role="list">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#about-page">ABOUT</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -561,7 +547,7 @@
             </div>
             <ul class="mobile-menu__links" role="list">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#about-page">ABOUT</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -677,7 +663,7 @@
           <input
             type="hidden"
             name="subject"
-            value="New ABC Springs Enquiry"
+            value="New XYZ Springs Enquiry"
           />
 
           <input
@@ -717,13 +703,13 @@
         </div>
         </div>
       </div>
+      
+      <!-- COPYRIGHT -->
+      
+      <div class="copyright">
+        &copy; 2025 XYZ Springs. All rights reserved.
+      </div>
     </main>
-
-    <!-- COPYRIGHT -->
-  
-    <footer>
-      &copy; 2025 ABC Springs. All rights reserved.
-    </footer>
 
     <!-- AUDIO MP3 -->
   

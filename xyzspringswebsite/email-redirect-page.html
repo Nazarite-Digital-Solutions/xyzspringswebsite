@@ -9,21 +9,24 @@
     <link rel="icon" type="image/svg+xml" href="xyzspringsfavicon.svg">
   
     <style>
-      *, *::before, *::after { 
+      *, 
+      *::before, 
+      *::after { 
         box-sizing: border-box; 
         margin: 0; 
         padding: 0; 
       }
 
-      html, body {
+      html, 
+      body {
         height: 100%;
         font-family: Arial, sans-serif;
-        background-color: #111111;
+        background-color: black;
         color: white;
         overflow-x: hidden;
       }
 
-      .page {
+      .email-redirect-page {
         width: 100%;
         min-height: 100vh;
         display: flex;
@@ -34,7 +37,7 @@
 
     /* ---------- BOX ---------- */
       
-      .card {
+      .email-redirect-page-card {
         width: 90%;
         max-width: 450px;
         background: black;
@@ -52,7 +55,7 @@
 
     /* ---------- SENTENCE ---------- */
       
-      .card__text {
+      .email-redirect-page-card-text {
         font-family: Arial, sans-serif;
         font-size: clamp(1rem, 2vw, 1.4rem);
         color: white;
@@ -62,7 +65,7 @@
 
     /* ---------- BUTTON ---------- */
       
-      .wa-btn {
+      .email-redirect-page-go-back-button {
         display: inline-block;
         padding: 0.75rem 2rem;
         min-height: 44px;
@@ -82,37 +85,37 @@
     /* ---------- DESKTOP HOVER ONLY ---------- */
       
       @media (hover: hover) and (pointer: fine) {
-        .wa-btn:hover {
+        .email-redirect-page-go-back-button:hover {
           background: red;
           color: white;
         }
       }
 
       @media (max-width: 1024px) {
-        .card { padding: 2.5rem 2.2rem;}
+        .email-redirect-page-card { padding: 2.5rem 2.2rem;}
       }
 
       @media (max-width: 700px) {
-        .card {
+        .email-redirect-page-card {
           width: 94%;
           padding: 2.2rem 1.8rem;
           gap: 1.6rem;
         }
         
-        .card__text { font-size: 1.2rem;}
+        .email-redirect-page-card-text { font-size: 1.2rem;}
       }
     
       @media (max-width: 468px) {
-        .card {
+        .email-redirect-page-card {
           width: 96%;
           padding: 2rem 1.4rem;
           border-radius: 18px;
           gap: 1.4rem;
         }
 
-        .card__text { font-size: 1rem;}
+        .email-redirect-page-card-text { font-size: 1rem;}
 
-        .wa-btn {
+        .email-redirect-page-go-back-button {
           width: 100%;
           text-align: center;
           font-size: 0.9rem;
@@ -126,13 +129,13 @@
   
   <body>
 
-    <main class="page">
-      <div class="card">
+    <main class="email-redirect-page">
+      <div class="email-redirect-page-card">
 
-        <p class="card__text">This would open an Email<br> 
+        <p class="email-redirect-page-card-text">This would open an Email<br> 
                               conversation on a live site</p>
 
-        <a href="contact.html" class="wa-btn" rel="noopener noreferrer">GO BACK</a>
+        <a href="contact.html" class="email-redirect-page-go-back-button" rel="noopener noreferrer">GO BACK</a>
 
       </div>
     </main>
