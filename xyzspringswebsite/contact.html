@@ -57,7 +57,7 @@
 
       /* ---------- BOXES ---------- */
     
-      .boxes {
+      .contact-page-boxes {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -66,7 +66,7 @@
         align-items: stretch;
       }
 
-      .box {
+      .contact-page-box {
         flex: 1 1 50%;
         background: black;
         border: 2px solid red;
@@ -76,18 +76,18 @@
         overflow: hidden;
       }
     
-      .box:first-child { 
+      .contact-page-box:first-child { 
         border-radius: 0.5rem 0 0 0.5rem; 
         border-right: none; 
       }
     
-      .box:last-child { 
+      .contact-page-box:last-child { 
         border-radius: 0 0.5rem 0.5rem 0; 
       }
 
       /* ---------- BOX HEADING ---------- */
     
-      .box-heading {
+      .contact-us-box-heading {
         text-align: center;
         font-size: clamp(1.3rem, 2.2vw, 1.9rem);
         color: white;
@@ -99,7 +99,7 @@
     
 /* ─────────────────────────────────────────────────── LEFT BOX ───────────────────────────────────────────────────── */
    
-      .left-box {
+      .contact-page-left-box {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -110,7 +110,7 @@
 
       /* ---------- WHATSAPP BUTTON ---------- */
     
-      .btn-whatsapp {
+      .whatsapp-button {
         display: inline-flex;
         align-items: center;
         gap: 0.6rem;
@@ -127,14 +127,14 @@
         font-weight: 700;
       }
     
-      .btn-whatsapp:hover {
+      .whatsapp-button:hover {
         background: #25D366;
         color: white;
       }
 
       /* ---------- WHATSAPP SVG ICON ---------- */
     
-      .wa-icon {
+      .whatsapp-icon {
         width: 1.25rem;
         height: 1.25rem;
         flex-shrink: 0;
@@ -142,7 +142,7 @@
 
       /* ---------- EMAIL BUTTON ---------- */
     
-      .btn-email {
+      .email-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -161,7 +161,7 @@
         text-decoration: none;
       }
     
-      .btn-email:hover {
+      .email-button:hover {
         background: red;
         color: white;
       }
@@ -172,13 +172,13 @@
         flex-shrink: 0;
       }
     
-      .btn-email:hover .envelope-icon {
+      .email-button:hover .envelope-icon {
         stroke: white;
       }
 
       /* ---------- CONNECT WITH US SECTION ---------- */
     
-      .connect-section {
+      .connect-with-us-section {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -186,7 +186,7 @@
         margin-top: 0.5rem;
       }
 
-      .connect-heading {
+      .connect-with-us-heading {
         font-size: clamp(0.95rem, 1.6vw, 1.15rem);
         color: white;
         letter-spacing: 0.12em;
@@ -219,9 +219,19 @@
 
 /* ─────────────────────────────────────────────────── RIGHT BOX ──────────────────────────────────────────────────── */
 
-      .right-box {
+      .contact-page-right-box {
         display: flex;
         flex-direction: column;
+      }
+      
+      .enquiry-form-box-heading {
+        text-align: center;
+        font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+        color: white;
+        letter-spacing: 0.12em;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        text-decoration: 2px underline red;
       }
 
       .contact-form {
@@ -260,7 +270,7 @@
         min-height: 110px; 
       }
 
-      .btn-submit {
+      .submit-button {
         align-self: center;
         background: white;
         color: black;
@@ -276,7 +286,7 @@
         margin-top: 0.5rem;
       }
     
-      .btn-submit:hover {
+      .submit-button:hover {
         background: red;
         color: white;
       }
@@ -332,9 +342,9 @@
       /* ---------- 1024px ---------- */
     
       @media (max-width: 1024px) {
-        .btn-whatsapp:hover,
-        .btn-email:hover,
-        .btn-submit:hover,
+        .whatsapp-button:hover,
+        .email-button:hover,
+        .submit-button:hover,
         .social-link.fb:hover,
         .social-link.ig:hover,
         .social-link.tt:hover {
@@ -342,11 +352,11 @@
           box-shadow: none;
         }
       
-        .boxes { 
+        .contact-page-boxes { 
           max-width: 95vw; 
         }
       
-        .box { 
+        .contact-page-box { 
           padding: 2.2rem 1.8rem; 
         }
       }
@@ -354,7 +364,7 @@
       /* ---------- 700px ---------- */
     
       @media (max-width: 700px) {
-        .boxes {
+        .contact-page-boxes {
           flex-direction: column;
           gap: 1.5rem;
         }
@@ -363,13 +373,13 @@
           margin-top: 10rem;
         }
       
-        .box:first-child {
+        .contact-page-box:first-child {
           border-radius: 0.5rem;
           border-right: 3px solid red;
           border-bottom: 3px solid red;
         }
       
-        .box:last-child { 
+        .contact-page-box:last-child { 
           border-radius: 0.5rem; 
         }
       
@@ -390,17 +400,18 @@
           margin-top: 10rem;
         }
       
-        .box { 
+        .contact-page-box { 
           padding: 1.6rem 1.1rem; 
         }
       
-        .box-heading { 
+        .contact-us-box-heading,
+        .enquiry-form-heading { 
           font-size: 1.15rem; 
         }
       
-        .btn-whatsapp, 
-        .btn-email, 
-        .btn-submit { 
+        .whatsapp-button, 
+        .email-button, 
+        .submit-button { 
           font-size: 0.9rem; 
           padding: 0.65rem 1.2rem; 
         }
@@ -571,18 +582,18 @@
 <!-- ──────────────────────────────────────────────── CONTACT PAGE ───────────────────────────────────────────────── -->
   
     <main>
-      <div class="boxes">
+      <div class="contact-page-boxes">
 
         <!-- LEFT BOX -->
         
-        <div class="box left-box">
-          <h2 class="box-heading">CONTACT US</h2>
+        <div class="contact-page-box contact-page-left-box">
+          <h2 class="contact-us-box-heading">CONTACT US</h2>
 
           <!-- WHATSAPP -->
           
-          <a href="whatsapp-redirect-page.html" target="_blank" rel="noopener" class="btn-whatsapp">
+          <a href="whatsapp-redirect-page.html" target="_blank" rel="noopener" class="whatsapp-button">
             WhatsApp Us
-            <svg class="wa-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="16" cy="16" r="16" fill="#25D366"/>
               <path d="M22.75 9.25A9.27 9.27 0 0 0 16 6.5C11.31 6.5 7.5 10.31 7.5 15a8.46 8.46 0 0 0 1.18 4.36L7.5 25.5l6.28-1.65A8.52 8.52 0 0 0 16 24.5c4.69 0 8.5-3.81 8.5-8.5a8.46 8.46 0 0 0-1.75-5.25Z" fill="white"/>
               <path d="M21.07 18.57c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13s-.67.85-.82 1.02c-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.52-1.44-1.78-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.39-.79-1.9-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.83 2.8 4.44 3.92.62.27 1.1.43 1.48.55.62.2 1.19.17 1.63.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3Z" fill="#25D366"/>
@@ -591,7 +602,7 @@
 
           <!-- EMAIL -->
           
-          <a href="email-redirect-page.html" class="btn-email">
+          <a href="email-redirect-page.html" class="email-button">
             <svg class="envelope-icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="4" width="20" height="16" rx="2"/>
               <polyline points="2,4 12,13 22,4"/>
@@ -601,8 +612,8 @@
 
           <!-- CONNECT WITH US -->
           
-          <div class="connect-section">
-            <h3 class="connect-heading">Connect With Us</h3>
+          <div class="connect-with-us-section">
+            <h3 class="connect-with-us-heading">Connect With Us</h3>
             <div class="contact-page-social-icons">
 
             <!-- FACEBOOK -->
@@ -645,8 +656,8 @@
 
       <!-- RIGHT BOX -->
         
-      <div class="box right-box">
-        <h2 class="box-heading">ENQUIRY FORM</h2>
+      <div class="contact-page-box contact-page-right-box">
+        <h2 class="enquiry-form-box-heading">ENQUIRY FORM</h2>
         
 
           <form
@@ -693,7 +704,7 @@
             required
           ></textarea>
 
-          <button type="submit" class="btn-submit">SUBMIT</button>
+          <button type="submit" class="submit-button">SUBMIT</button>
         </form>
 
         <!-- MESSAGE SUCCESS OVERLAY -->
@@ -756,9 +767,9 @@
       if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
         const style = document.createElement('style');
         style.textContent = `
-          .btn-whatsapp:hover,
-          .btn-email:hover,
-          .btn-submit:hover,
+          .whatsapp-button:hover,
+          .email-button:hover,
+          .submit-button:hover,
           .social-link.fb:hover,
           .social-link.ig:hover,
           .social-link.tt:hover {
