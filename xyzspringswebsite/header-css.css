@@ -31,7 +31,7 @@ a {
   font-family: Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #0a66c2;
+  color: #0A66C2;
   white-space: nowrap;
 }
 
@@ -48,7 +48,7 @@ a {
 .banner-center a {
   display: flex;
   align-items: center;
-  color: #0a66c2;
+  color: #0A66C2;
   transition: opacity 0.2s;
 }
         
@@ -76,7 +76,7 @@ a {
   justify-content: space-between;
   padding: 0 2rem;
   gap: 2rem;
-  border-bottom: 4px solid red;
+  border-bottom: 3px solid red;
   position: relative;
   z-index: 1001;
 }
@@ -258,6 +258,8 @@ a {
 
 /* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
         
+/* ---------- 1024px ---------- */
+
 @media (max-width: 1024px) {
   .banner {
     padding: 0.5rem 1.5rem;
@@ -279,25 +281,13 @@ a {
 
   /* ---------- SHOW LINKS ON HAMBURGER ---------- */
         
-  .navbar__center,
+  .navbar-center,
   .navbar-links {
     display: none;
   }
 
   .hamburger {
     display: flex;
-  }
-
-  /* ---------- REMOVE HOVER EFFECTS ON MOBILE AND TABLET ---------- */
-        
-  .navbar-links li a:hover,
-  .navbar-socials a:hover,
-  .banner-center a:hover {
-    background-color: transparent;
-    border-radius: 0;
-    animation: none;
-    opacity: 1;
-    transform: none;
   }
 
   .mobile-menu {
@@ -308,6 +298,8 @@ a {
     display: block;
   }
 }
+
+/* ---------- 700px ---------- */
 
 @media (max-width: 700px) {
   .banner {
@@ -343,7 +335,21 @@ a {
   .mobile-menu-socials {
     padding: 0.75rem 1rem;
   }
+  
+  /* ---------- DISABLE HOVER EFFECTS ON TABLET ---------- */
+  
+  .navbar-links li a:hover,
+  .navbar-socials a:hover,
+  .banner-center a:hover {
+    background-color: transparent;
+    border-radius: 0;
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
+
+/* ---------- 468px ---------- */
 
 @media (max-width: 468px) {
   .banner {
@@ -393,5 +399,17 @@ a {
   .social-icon {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  
+  /* ---------- DISABLE HOVER EFFECTS ON MOBILE ---------- */
+  
+  .navbar-links li a:hover,
+  .navbar-socials a:hover,
+  .banner-center a:hover {
+    background-color: transparent;
+    border-radius: 0;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

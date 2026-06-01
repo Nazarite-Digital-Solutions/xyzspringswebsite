@@ -6,7 +6,7 @@
   
     <title>Social Media Redirect Page | XYZ Springs</title>
   
-    <link rel="icon" type="image/svg+xml" href="xyzspringsfavicon.svg">
+    <link rel="icon" type="image/svg+xml" href="xyz-springs-favicon.svg">
   
     <style>
       *, 
@@ -78,19 +78,23 @@
         cursor: pointer;
         transition: background 0.2s ease, color 0.2s ease;
       }
-
-      /* ---------- DESKTOP HOVER ONLY ---------- */
       
-      @media (hover: hover) and (pointer: fine) {
-        .social-media-redirect-page-go-back-button:hover {
-          background: red;
-          color: white;
+      .social-media-redirect-page-go-back-button:hover {
+        background: red;
+        color: white;
+      }
+      
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 1024px ---------- */
+      
+      @media (max-width: 1024px) {
+        .social-media-redirect-page-card { 
+          padding: 2.5rem 2.2rem; 
         }
       }
-
-      @media (max-width: 1024px) {
-        .social-media-redirect-page-card { padding: 2.5rem 2.2rem; }
-      }
+      
+      /* ---------- 700px ---------- */
 
       @media (max-width: 700px) {
         .social-media-redirect-page-card {
@@ -99,8 +103,19 @@
           gap: 1.6rem;
         }
         
-        .social-media-redirect-page-card-text { font-size: 1.2rem;}
+        .social-media-redirect-page-card-text { 
+          font-size: 1.2rem;
+        }
+        
+        /* ---------- DISABLE HOVER EFFECTS ON TABLET ---------- */
+        
+        .social-media-redirect-page-go-back-button:hover {
+          background: white;
+          color: black;
+        }
       }
+      
+      /* ---------- 468px ---------- */
 
       @media (max-width: 468px) {
         .social-media-redirect-page-card {
@@ -110,13 +125,22 @@
           gap: 1.4rem;
         }
 
-        .social-media-redirect-page-card-text { font-size: 1rem; }
+        .social-media-redirect-page-card-text { 
+          font-size: 1rem; 
+        }
 
         .social-media-redirect-page-go-back-button {
           width: 100%;
           text-align: center;
           font-size: 0.9rem;
           padding: 0.8rem 1.5rem;
+        }
+        
+        /* ---------- DISABLE HOVER EFFECTS ON MOBILE ---------- */
+        
+        .social-media-redirect-page-go-back-button:hover {
+          background: white;
+          color: black;
         }
       }
     </style>

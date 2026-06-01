@@ -6,7 +6,7 @@
   
     <title>WhatsApp Redirect Page | XYZ Springs</title>
   
-    <link rel="icon" type="image/svg+xml" href="xyzspringsfavicon.svg">
+    <link rel="icon" type="image/svg+xml" href="xyz-springs-favicon.svg">
   
     <style>
       *, 
@@ -20,7 +20,6 @@
       html, 
       body {
         height: 100%;
-        font-family: Arial, sans-serif;
         overflow-x: hidden;
       }
 
@@ -80,19 +79,23 @@
         cursor: pointer;
         transition: background 0.25s ease, color 0.25s ease;
       }
-
-      /* ---------- DESKTOP HOVER ONLY ---------- */
       
-      @media (hover: hover) and (pointer: fine) {
-        .whatsapp-redirect-page-go-back-button:hover {
-          background: red;
-          color: white;
+      .whatsapp-redirect-page-go-back-button:hover {
+        background: red;
+        color: white;
+      }
+      
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 1024px ---------- */
+      
+      @media (max-width: 1024px) {
+        .whatsapp-redirect-page-card { 
+          padding: 2.5rem 2.2rem;
         }
       }
-
-      @media (max-width: 1024px) {
-        .whatsapp-redirect-page-card { padding: 2.5rem 2.2rem;}
-      }
+      
+      /* ---------- 700px ---------- */
 
       @media (max-width: 700px) {
         .whatsapp-redirect-page-card {
@@ -101,8 +104,19 @@
           gap: 1.6rem;
         }
         
-        .whatsapp-redirect-page-card-text { font-size: 1.2rem;}
+        .whatsapp-redirect-page-card-text { 
+          font-size: 1.2rem;
+        }
+        
+        /* ---------- DISABLE HOVER EFFECTS ON TABLET ---------- */
+        
+        .whatsapp-redirect-page-go-back-button:hover {
+          background: white;
+          color: black;
+        }
       }
+      
+      /* ---------- 468px ---------- */
     
       @media (max-width: 468px) {
         .whatsapp-redirect-page-card {
@@ -112,13 +126,22 @@
           gap: 1.4rem;
         }
 
-        .whatsapp-redirect-page-card-text { font-size: 1rem;}
+        .whatsapp-redirect-page-card-text { 
+          font-size: 1rem;
+        }
 
         .whatsapp-redirect-page-go-back-button {
           width: 100%;
           text-align: center;
           font-size: 0.9rem;
           padding: 0.8rem 1.5rem;
+        }
+        
+        /* ---------- DISABLE HOVER EFFECTS ON MOBILE ---------- */
+        
+         .whatsapp-redirect-page-go-back-button:hover {
+          background: white;
+          color: black;
         }
       }
     </style>

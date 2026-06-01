@@ -6,7 +6,7 @@
   
     <title>LinkedIn Redirect Page | XYZ Springs</title>
   
-    <link rel="icon" type="image/svg+xml" href="xyzspringsfavicon.svg">
+    <link rel="icon" type="image/svg+xml" href="xyz-springs-favicon.svg">
   
     <style>
       *, 
@@ -78,18 +78,18 @@
         cursor: pointer;
         transition: background 0.25s ease, color 0.25s ease;
       }
-
-      /* ---------- DESKTOP HOVER ONLY ---------- */
       
-      @media (hover: hover) and (pointer: fine) {
-        .linkedin-redirect-page-go-back-button:hover {
-          background: red;
-          color: white;
-        }
+      .linkedin-redirect-page-go-back-button:hover {
+        background: red;
+        color: white;
       }
+      
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
 
       @media (max-width: 1024px) {
-        .linkedin-redirect-page-card { padding: 2.5rem 2.2rem; }
+        .linkedin-redirect-page-card { 
+          padding: 2.5rem 2.2rem; 
+        }
       }
 
       @media (max-width: 700px) {
@@ -99,7 +99,16 @@
           gap: 1.6rem;
         }
         
-        .linkedin-redirect-page-card-text { font-size: 1.2rem;}
+        .linkedin-redirect-page-card-text { 
+          font-size: 1.2rem;
+        }
+        
+        /* ---------- DISABLE HOVER EFFECTS ON TABLET ---------- */
+      
+        .linkedin-redirect-page-go-back-button:hover {
+          background: white;
+          color: black;
+        }
       }
 
       @media (max-width: 468px) {
@@ -110,13 +119,22 @@
           gap: 1.4rem;
         }
 
-        .linkedin-redirect-page-card-text { font-size: 1rem; }
+        .linkedin-redirect-page-card-text { 
+          font-size: 1rem; 
+        }
 
         .linkedin-redirect-page-go-back-button {
           width: 100%;
           text-align: center;
           font-size: 0.9rem;
           padding: 0.8rem 1.5rem;
+        }
+        
+        /* ---------- DISABLE HOVER EFFECTS ON MOBILE ---------- */
+        
+        .linkedin-redirect-page-go-back-button:hover {
+          background: white;
+          color: black;
         }
       }
     </style>
