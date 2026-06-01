@@ -399,6 +399,10 @@
         .hero-page-sub { 
           font-size: clamp(0.8rem, 3.5vw, 1rem); 
         }
+        
+        .about-page-buttons {
+          margin-top: 3rem;
+        }
             
         .about-page-button:hover,
         .hero-page-button:hover { 
@@ -412,6 +416,11 @@
             
         .about-page-text { 
           font-size: 0.88rem; 
+        }
+        
+        .copyright {
+          margin-top: 0.5rem;
+          font-size: 0.75rem;
         }
       }
     </style>
@@ -428,8 +437,8 @@
     
     <header class="site-header">
         <div class="banner">
-            <span class="banner__left">DEMO SITE – BUILT FOR DEMO PURPOSES</span>
-            <div class="banner__center">
+            <span class="banner-left">DEMO SITE – BUILT FOR DEMO PURPOSES</span>
+            <div class="banner-center">
                 <span>Connect with me</span>
                 <a href="linkedin-redirect-page.html" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg class="linkedin-logo" viewBox="0 0 24 24" fill="#0a66c2" xmlns="http://www.w3.org/2000/svg">
@@ -442,7 +451,7 @@
 <!-- ─────────────────────────────────────────────────── NAVBAR ──────────────────────────────────────────────────── -->
 
         <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <div class="navbar__logo">
+            <div class="navbar-logo">
                 <picture>
                     <source srcset="xyz-springs-logo.webp" type="image/webp">
                     <img src="xyz-springs-logo.png" alt="XYZ Springs logo">
@@ -451,9 +460,9 @@
 
             <!-- SOCIALS -->
             
-            <div class="navbar__center">
-                <span class="navbar__tagline">Stay connected</span>
-                <div class="navbar__socials">
+            <div class="navbar-center">
+                <span class="navbar-tagline">Stay connected</span>
+                <div class="navbar-socials">
             
                     <!-- FCEBOOK -->
                     
@@ -492,7 +501,7 @@
 
             <!-- RIGHT NAV LINKS -->
             
-            <ul class="navbar__links" role="list">
+            <ul class="navbar-links" role="list">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="index.html#about-page">ABOUT</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
@@ -512,8 +521,8 @@
         <!-- MOBILE DROP DOWN -->
         
         <div class="mobile-menu" id="mobile-menu" role="menu">
-            <div class="mobile-menu__socials">
-                <span class="navbar__tagline">Stay connected</span>
+            <div class="mobile-menu-socials">
+                <span class="navbar-tagline">Stay connected</span>
                 
                 <!-- FCEBOOK -->
                 
@@ -548,7 +557,7 @@
                     </svg>
                 </a>
             </div>
-            <ul class="mobile-menu__links" role="list">
+            <ul class="mobile-menu-links" role="list">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="index.html#about-page">ABOUT</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>

@@ -20,24 +20,22 @@
       html, 
       body {
         height: 100%;
-        font-family: Arial, sans-serif;
-        background-color: black;
-        color: white;
         overflow-x: hidden;
       }
 
-      .page {
+      .linkedin-redirect-page {
         width: 100%;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 2rem 5vw;
+        background-color: #111;
       }
 
       /* ---------- BOX ---------- */
       
-      .card {
+      .linkedin-redirect-page-card {
         width: 90%;
         max-width: 495px;
         background: black;
@@ -54,7 +52,7 @@
 
       /* ---------- SENTENCE ---------- */
       
-      .card__text {
+      .linkedin-redirect-page-card-text {
         font-family: Arial, sans-serif;
         font-size: clamp(1rem, 2vw, 1.4rem);
         color: white;
@@ -64,7 +62,7 @@
 
       /* ---------- BUTTON ---------- */
       
-      .wa-btn {
+      .linkedin-redirect-page-go-back-button {
         display: inline-block;
         padding: 0.75rem 2rem;
         min-height: 44px;
@@ -84,37 +82,37 @@
       /* ---------- DESKTOP HOVER ONLY ---------- */
       
       @media (hover: hover) and (pointer: fine) {
-        .wa-btn:hover {
+        .linkedin-redirect-page-go-back-button:hover {
           background: red;
           color: white;
         }
       }
 
       @media (max-width: 1024px) {
-        .card { padding: 2.5rem 2.2rem; }
+        .linkedin-redirect-page-card { padding: 2.5rem 2.2rem; }
       }
 
       @media (max-width: 700px) {
-        .card {
+        .linkedin-redirect-page-card {
           width: 94%;
           padding: 2.2rem 1.8rem;
           gap: 1.6rem;
         }
         
-        .card__text { font-size: 1.2rem;}
+        .linkedin-redirect-page-card-text { font-size: 1.2rem;}
       }
 
       @media (max-width: 468px) {
-        .card {
+        .linkedin-redirect-page-card {
           width: 96%;
           padding: 2rem 1.4rem;
           border-radius: 18px;
           gap: 1.4rem;
         }
 
-        .card__text { font-size: 1rem; }
+        .linkedin-redirect-page-card-text { font-size: 1rem; }
 
-        .wa-btn {
+        .linkedin-redirect-page-go-back-button {
           width: 100%;
           text-align: center;
           font-size: 0.9rem;
@@ -128,12 +126,12 @@
   
   <body>
 
-    <main class="page">
-      <div class="card">
+    <main class="linkedin-redirect-page">
+      <div class="linkedin-redirect-page-card">
 
-        <p class="card__text">On a live site, this would open LinkedIn</p>
+        <p class="linkedin-redirect-page-card-text">On a live site, this would open LinkedIn</p>
 
-        <a href="index.html" class="wa-btn" rel="noopener noreferrer">GO BACK</a>
+        <a href="index.html" class="linkedin-redirect-page-go-back-button" rel="noopener noreferrer">GO BACK</a>
 
       </div>
     </main>
