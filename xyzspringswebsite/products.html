@@ -13,7 +13,7 @@
     <meta name="author" content="Nazarite Business Solutions">
     
     <link rel="icon" type="image/svg+xml" href="xyzspringsfavicon.svg">
-    <link rel="stylesheet" href="xyzsprings-headercss.css">
+    <link rel="stylesheet" href="header-css.css">
   
     <style>
       *, 
@@ -43,7 +43,7 @@
 
       /* ---------- PRODUCT PAGE SECTION ---------- */
       
-      .hero {
+      .product-page {
         min-height: 100vh;
         width: 100%;
         background-color: black;
@@ -54,7 +54,7 @@
         align-items: center;
       }
 
-      .hero-inner {
+      .product-page-inner {
         width: 90%;
         max-width: 1200px;
         display: flex;
@@ -65,7 +65,7 @@
 
       /* ---------- PRODUCT PAGE TITLE ---------- */
       
-      .hero-title {
+      .product-page-title {
         text-align: center;
         font-family: Arial, sans-serif;
         font-size: 2.5rem;
@@ -75,14 +75,14 @@
         line-height: 1.2;
       }
 
-      .hero-title .word-springs {
+      .product-page-title .product-page-title-word-springs {
         color: white;
         text-shadow: 2px 2px 4px white;
       }
 
       /* ---------- PRODUCT INFORMATION BOX ---------- */
       
-      .description-box {
+      .product-information-box {
         font-family: Arial, sans-serif;
         border: 3px solid red;
         border-radius: 0.5rem;
@@ -96,12 +96,12 @@
         line-height: 1.7;
       }
 
-      .description-box .brand-xyz {
+      .product-information-box .product-information-box-xyz {
         color: red;
         font-weight: 700;
       }
 
-      .description-box .brand-springs {
+      .product-information-box .product-information-box-springs {
         color: white;
         font-weight: 700;
       }
@@ -125,10 +125,9 @@
         flex-direction: column;
         align-items: center;
         overflow: hidden;
-        min-height: 280px;
       }
 
-      .product-card__heading {
+      .product-card-heading {
         font-family: 'Times New Roman', Times, serif;
         font-size: 1.4rem;
         font-weight: 700;
@@ -138,39 +137,34 @@
         padding: 1rem 1rem 0.75rem;
       }
 
-      .product-card__image-wrapper {
+      .product-card-image-wrapper {
         width: 100%;
-        flex: 1;
         overflow: hidden;
         background-color: black;
-        min-height: 180px;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .product-card__image-wrapper picture {
+      .product-card-image-wrapper picture {
         width: 100%;
-        height: 100%;
         display: block;
       }
 
-      .product-card__image-wrapper img {
+      .product-card-image-wrapper img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
         display: block;
       }
 
       /* ---------- CONTACT BUTTON ---------- */
       
-      .contact-btn-wrapper {
+      .product-page-contact-button-wrapper {
         display: flex;
         justify-content: center;
         margin-top: 1.5rem;
       }
 
-      .contact-btn {
+      .product-page-contact-button {
         font-family: Arial, sans-serif;
         font-size: 1rem;
         font-weight: 700;
@@ -183,6 +177,8 @@
         cursor: pointer;
         transition: background-color 0.25s ease, color 0.25s ease;
         letter-spacing: 0.04em;
+        display: inline-block;
+        text-decoration: none;
       }
 
       /* ---------- COPYRIGHT ---------- */
@@ -200,7 +196,7 @@
       
     /* ===== HOVER EFFECTS – DESKTOP ONLY ===== */
       @media (hover: hover) and (pointer: fine) {
-        .contact-btn:hover {
+        .product-page-contact-button:hover {
           background-color: red;
           color: white;
         }
@@ -209,26 +205,22 @@
       /* ---------- 1024px ---------- */
       
       @media screen and (max-width: 1024px) {
-        .hero-title {
+        .product-page-title {
           font-size: 2.2rem;
         }
 
-        .description-box {
+        .product-information-box {
           font-size: 1.1rem;
           padding: 1.2rem 1.5rem;
         }
 
-        .product-card__heading {
+        .product-card-heading {
           font-size: 1.3rem;
-        }
-
-        .product-card__image-wrapper {
-          min-height: 150px;
         }
 
       /* ---------- HOVER EFFECTS ONLY ON DESKTOP ---------- */
         
-        .contact-btn:hover {
+        .product-page-contact-button:hover {
           background-color: white;
           color: black;
         }
@@ -237,20 +229,20 @@
       /* ---------- 700px ---------- */
       
       @media screen and (max-width: 700px) {
-        .hero {
+        .product-page {
           padding-top: 10rem;
         }
 
-        .hero-inner {
+        .product-page-inner {
           width: 94%;
           gap: 1.5rem;
         }
 
-        .hero-title {
+        .product-page-title {
           font-size: 2rem;
         }
 
-        .description-box {
+        .product-information-box {
           font-size: 1rem;
           padding: 1rem 1.2rem;
         }
@@ -260,18 +252,14 @@
           gap: 1rem;
         }
 
-        .product-card__heading {
+        .product-card-heading {
           font-size: 1.1rem;
           padding: 0.8rem 0.8rem 0.6rem;
         }
 
-        .product-card__image-wrapper {
-          min-height: 120px;
-        }
-
         /* ---------- DISABLE HOVER EFFECTS ON TABLET ---------- */
         
-        .contact-btn:hover {
+        .product-page-contact-button:hover {
           background-color: white;
           color: black;
         }
@@ -280,21 +268,21 @@
       /* ---------- 468px ---------- */
       
       @media screen and (max-width: 468px) {
-        .hero {
+        .product-page {
           padding-top: 10rem;
           padding-bottom: 2rem;
         }
 
-        .hero-inner {
+        .product-page-inner {
           width: 96%;
           gap: 1.2rem;
         }
 
-        .hero-title {
+        .product-page-title {
           font-size: 1.8rem;
         }
 
-        .description-box {
+        .product-information-box {
           font-size: 0.95rem;
           padding: 0.9rem 1rem;
         }
@@ -304,30 +292,26 @@
           gap: 0.75rem;
         }
 
-        .product-card__heading {
+        .product-card-heading {
           font-size: 0.85rem;
           padding: 0.6rem 0.5rem 0.5rem;
-          text-decoration-thickness: 2px;
+          text-decoration: 2px underline red;
         }
 
-        .product-card__image-wrapper {
-          min-height: 90px;
-        }
-
-        .contact-btn {
+        .product-page-contact-button {
           font-size: 0.9rem;
           padding: 0.6rem 2rem;
+        }
+        
+        .copyright {
+          font-size: 0.75rem;
         }
 
         /* ---------- DISABLE HOVER EFFECTS ON MOBILE ---------- */
         
-        .contact-btn:hover {
+        .product-page-contact-button:hover {
           background-color: white;
           color: black;
-        }
-
-        .copyright {
-          font-size: 0.75rem;
         }
       }
     </style>
@@ -360,8 +344,8 @@
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="navbar__logo">
                 <picture>
-                    <source srcset="xyzsprings-header-logo.webp" type="image/webp">
-                    <img src="xyzsprings-header-logo.png" alt="XYZ Springs logo">
+                    <source srcset="xyz-springs-logo.webp" type="image/webp">
+                    <img src="xyz-springs-logo.png" alt="XYZ Springs logo">
                 </picture>
             </div>
 
@@ -486,19 +470,19 @@
     
 <!-- ──────────────────────────────────────────────── PAGE CONTENT ───────────────────────────────────────────────── -->
     
-    <main class="hero">
-      <div class="hero-inner">
+    <main class="product-page">
+      <div class="product-page-inner">
 
         <!-- PRODUCT PAGE TITLE -->
         
-        <h1 class="hero-title">
-          XYZ <span class="word-springs">SPRINGS</span> PRODUCT RANGE
+        <h1 class="product-page-title">
+          XYZ <span class="product-page-title-word-springs">SPRINGS</span> PRODUCT RANGE
         </h1>
 
         <!-- PRODUCT INFORMATION BOX -->
         
-        <div class="description-box">
-          At <span class="brand-xyz">XYZ</span> <span class="brand-springs">Springs</span>, we manufacture springs and 
+        <div class="product-information-box">
+          At <span class="product-information-box-xyz">XYZ</span> <span class="product-information-box-springs">Springs</span>, we manufacture springs and 
           wire forms in wire sizes from 0.3&nbsp;mm to 3&nbsp;mm, using stainless steel, phosphor bronze, precision drawn 
           galvanised, and hand drawn low carbon wire.
         </div>
@@ -510,8 +494,8 @@
           <!-- PRODUCT CARD 1 COMPRESSION SPRING -->
           
           <div class="product-card">
-            <h2 class="product-card__heading">COMPRESSION SPRINGS</h2>
-            <div class="product-card__image-wrapper">
+            <h2 class="product-card-heading">COMPRESSION SPRINGS</h2>
+            <div class="product-card-image-wrapper">
               <picture>
                 <source srcset="compression-spring.webp" type="image/webp">
                 <img src="compression-spring.jpg" alt="Compression Spring" loading="lazy">
@@ -522,8 +506,8 @@
           <!-- PRODUCT CARD 2 TENSION SPRING -->
           
           <div class="product-card">
-            <h2 class="product-card__heading">TENSION SPRINGS</h2>
-            <div class="product-card__image-wrapper">
+            <h2 class="product-card-heading">TENSION SPRINGS</h2>
+            <div class="product-card-image-wrapper">
               <picture>
                 <source srcset="tension-spring.webp" type="image/webp">
                 <img src="tension-spring.jpg" alt="Tension Spring" loading="lazy">
@@ -540,8 +524,8 @@
           <!-- PRODUCT CARD 3 TORSION SPRINGS -->
           
           <div class="product-card">
-            <h2 class="product-card__heading">TORSION SPRINGS</h2>
-            <div class="product-card__image-wrapper">
+            <h2 class="product-card-heading">TORSION SPRINGS</h2>
+            <div class="product-card-image-wrapper">
               <picture>
                 <source srcset="torsion-spring.webp" type="image/webp">
                 <img src="torsion-spring.jpg" alt="Torsion Spring" loading="lazy">
@@ -552,8 +536,8 @@
           <!-- PRODUCT CARD 4 WIRE FORMS -->
           
           <div class="product-card">
-            <h2 class="product-card__heading">WIRE FORMS</h2>
-            <div class="product-card__image-wrapper">
+            <h2 class="product-card-heading">WIRE FORMS</h2>
+            <div class="product-card-image-wrapper">
               <picture>
                 <source srcset="wire-form.webp" type="image/webp">
                 <img src="wire-form.jpg" alt="Wire Form" loading="lazy">
@@ -565,8 +549,8 @@
 
         <!-- CONTACT BUTTON -->
         
-        <div class="contact-btn-wrapper">
-          <button class="contact-btn" href="contact.html">CONTACT US</button>
+        <div class="product-page-contact-button-wrapper">
+          <a href="contact.html" class="product-page-contact-button">CONTACT US</a>
         </div>
 
       </div>
