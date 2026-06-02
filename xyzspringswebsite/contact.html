@@ -93,7 +93,7 @@
         letter-spacing: 0.12em;
         margin-bottom: 1.5rem;
         padding-bottom: 1.5rem;
-        text-decoration: 2px underline red;
+        text-decoration: 3px underline red;
       }
     
 /* ─────────────────────────────────────────────────── LEFT BOX ───────────────────────────────────────────────────── */
@@ -191,7 +191,7 @@
         color: white;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        text-decoration: 2px underline red;
+        text-decoration: 3px underline red;
         padding-bottom: 0.25rem;
       }
 
@@ -357,7 +357,6 @@
         .contact-page-box:first-child {
           border-radius: 0.5rem;
           border-right: 3px solid red;
-          border-bottom: 3px solid red;
         }
       
         .contact-page-box:last-child { 
@@ -399,8 +398,10 @@
         }
       
         .contact-us-box-heading,
-        .enquiry-form-heading { 
+        .enquiry-form-box-heading,
+        .connect-with-us-heading { 
           font-size: 1.15rem; 
+          text-decoration: 2px underline red;
         }
       
         .whatsapp-button, 
@@ -583,14 +584,24 @@
     </header>
     
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-        hamburger.addEventListener('click', () => {
+      hamburger.addEventListener('click', () => {
         const isOpen = hamburger.classList.toggle('open');
         mobileMenu.classList.toggle('open', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen);
+      });
+
+      const menuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
         });
+      });
     </script>
       
 <!-- ──────────────────────────────────────────────── CONTACT PAGE ───────────────────────────────────────────────── -->

@@ -458,14 +458,24 @@
     </header>
     
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-        hamburger.addEventListener('click', () => {
+      hamburger.addEventListener('click', () => {
         const isOpen = hamburger.classList.toggle('open');
         mobileMenu.classList.toggle('open', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen);
+      });
+
+      const menuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
         });
+      });
     </script>
     
 <!-- ──────────────────────────────────────────────── PAGE CONTENT ───────────────────────────────────────────────── -->
